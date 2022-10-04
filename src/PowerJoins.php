@@ -10,6 +10,26 @@ use Kirschbaum\PowerJoins\FakeJoinCallback;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
+/**
+ * Trait PowerJoinsTrait
+ *
+ * @package App\Traits
+ *
+ * @method static $this joinRelationship($relation, $callback = null, $joinType = 'join', $useAlias = false, bool $disableExtraConditions = false)
+ * @method static $this leftJoinRelationship($relation, $callback = null, $useAlias = false, bool $disableExtraConditions = false)
+ * @method static $this rightJoinRelationship($relation, $callback = null, $useAlias = false, bool $disableExtraConditions = false)
+ * @method static $this joinRelationshipUsingAlias($relation, $callback = null, bool $disableExtraConditions = false)
+ * @method static $this powerJoinHas($relation, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
+ * @method static $this powerJoinWhereHas($relation, $callback = null, $operator = '>=', $count = 1)
+ * @method static $this powerJoinDoesntHave($relation, $boolean = 'and', $callback = null)
+ * @method static $this orderByPowerJoins($sort, $direction = 'asc', $aggregation = null, $joinType = 'join')
+ * @method static $this orderByPowerJoinsCount($sort, $direction = 'asc')
+ * @method static $this orderByPowerJoinsAvg($sort, $direction = 'asc')
+ * @method static $this orderByPowerJoinsSum($sort, $direction = 'asc')
+ * @method static $this orderByPowerJoinsMin($sort, $direction = 'asc')
+ * @method static $this orderByPowerJoinsMax($sort, $direction = 'asc')
+ */
+
 trait PowerJoins
 {
     /**
